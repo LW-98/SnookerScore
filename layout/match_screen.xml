@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/accountToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/redBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ball_red"
+        android:contentDescription="@string/redBall"
+        app:layout_constraintBottom_toTopOf="@+id/blueBall"
+        app:layout_constraintEnd_toStartOf="@+id/yellowBall"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/blackBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/ball_black"
+        android:contentDescription="@string/blackBall"
+        app:layout_constraintBottom_toTopOf="@+id/foulButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/pinkBall" />
+
+    <Button
+        android:id="@+id/pinkBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/ball_pink"
+        android:contentDescription="@string/pinkBall"
+        app:layout_constraintBottom_toTopOf="@+id/endGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/blueBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/ball_blue"
+        android:contentDescription="@string/blueBall"
+        app:layout_constraintBottom_toTopOf="@+id/undoButton"
+        app:layout_constraintEnd_toStartOf="@+id/pinkBall"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/brownBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ball_brown"
+        android:contentDescription="@string/brownBall"
+        app:layout_constraintBottom_toTopOf="@+id/blackBall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/greenBall" />
+
+    <Button
+        android:id="@+id/greenBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ball_green"
+        android:contentDescription="@string/greenBall"
+        app:layout_constraintBottom_toTopOf="@+id/pinkBall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/yellowBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ball_yellow"
+        android:contentDescription="@string/yellowBall"
+        app:layout_constraintBottom_toTopOf="@+id/pinkBall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="42dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/undo_button"
+        android:textColor="@android:color/tertiary_text_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/redoButton"
+        android:layout_width="42dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/redo_logo"
+        android:textColor="@android:color/tertiary_text_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/undoButton" />
+
+    <Button
+        android:id="@+id/endGameButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_button_background"
+        android:text="@string/endGameButton"
+        android:textAllCaps="false"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/foulButton"
+        app:layout_constraintStart_toEndOf="@+id/redoButton" />
+
+    <Button
+        android:id="@+id/foulButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_button_background"
+        android:text="@string/foulButton"
+        android:textAllCaps="false"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/playerOneName"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/playerOneHolder"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/verticalScoreDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountToolbar" />
+
+    <TextView
+        android:id="@+id/playerTwoName"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/playerTwoHolder"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalScoreDivider"
+        app:layout_constraintTop_toBottomOf="@+id/accountToolbar" />
+
+    <View
+        android:id="@+id/verticalScoreDivider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="380dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountToolbar" />
+
+    <View
+        android:id="@+id/horizontalScoreDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/accountToolbar" />
+
+    <Button
+        android:id="@+id/missButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/login_button_background"
+        android:text="@string/missButton"
+        android:textAllCaps="false"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/yellowBall"
+        app:layout_constraintEnd_toEndOf="@+id/playerOneShotHistory"
+        app:layout_constraintStart_toStartOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/switchPlayerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/login_button_background"
+        android:text="@string/switchButton"
+        android:textAllCaps="false"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/greenBall"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/playerTwoShotHistory" />
+
+    <TextView
+        android:id="@+id/playerOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/scoreHolder"
+        app:layout_constraintEnd_toStartOf="@+id/verticalScoreDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneName" />
+
+    <TextView
+        android:id="@+id/playerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/scoreHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalScoreDivider"
+        app:layout_constraintTop_toBottomOf="@+id/playerTwoName" />
+
+    <TextView
+        android:id="@+id/playerOnePointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/playerPointer"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/playerOneName"
+        app:layout_constraintEnd_toStartOf="@+id/verticalScoreDivider"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/playerTwoPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/playerPointer"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/playerTwoName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalScoreDivider" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="25dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playerOneShotHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/missButton"
+        app:layout_constraintEnd_toStartOf="@+id/verticalScoreDivider"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScoreDivider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playerTwoShotHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/switchPlayerButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/verticalScoreDivider"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScoreDivider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

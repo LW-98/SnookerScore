@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/login_button_background"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/playerManPlayerName"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="124dp"
+        android:layout_toStartOf="@+id/deletePlayerButton"
+        android:text="Opponent"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/winRecord"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_toStartOf="@+id/deletePlayerButton"
+        android:text="Record"
+        android:textColor="@color/loginDetailsDark"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/deletePlayerButton"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/delete" />
+</RelativeLayout>
